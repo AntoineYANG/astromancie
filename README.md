@@ -1,3 +1,3 @@
 # Astromancie
 
-What 'bout... _playing a dice game_?
+What 'bout... _rolling a die_?
