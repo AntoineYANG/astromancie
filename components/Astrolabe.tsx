@@ -541,9 +541,17 @@ void main() {
 
   return (
     <div
-      className="absolute inset-0 w-screen h-screen flex items-stretch justify-stretch p-[5%] overflow-hidden"
+      className="absolute inset-0 w-screen h-screen flex items-stretch justify-stretch p-[5%] overflow-hidden select-none"
       onMouseDown={() => setPushed(true)}
       onMouseUp={() => setPushed(false)}
+      onTouchStart={() => setPushed(true)}
+      onTouchEnd={() => setPushed(false)}
+      onSelect={e => e.preventDefault()}
+      unselectable="on"
+      style={{
+        MozUserSelect: 'none',
+        WebkitUserSelect: 'none',
+      }}
     >
       <div ref={mountRef} className="w-full h-full flex items-center justify-center" />
       <div
